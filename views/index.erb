@@ -4,9 +4,21 @@
   <title>Web Guesser</title>
 </head>
 <body>
+  <form>
+    <input type="text" name="guess">
+    <input type="submit" value="Guess!">
+  </form>
   <p>
-    The secret number is <%= number %>
+    Your guess is <%= params["guess"] %>.
   </p>
+
+  <p>
+    <b>Evaluation:</b> <%= message %></p>
+
+  
+  <% if number == params["guess"].to_i %>
+    <p><i>The secret number is <%= number %></i></p>
+  <% end %>
+  
 </body>
 </html>
-
