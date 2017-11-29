@@ -1,6 +1,7 @@
 require "sinatra"
 
-@@guesses = 5
+# Start with 6 guesses because the /index load counts
+@@guesses = 6
 
 set :number, rand(101)
 
@@ -30,18 +31,18 @@ def reset_game
 end
 
 get '/' do
-  if @@guesses > 0
-    guess = params["guess"].to_i
-    evaluate = check_guess(guess)
-    message = evaluate[0]
-    background_color = evaluate[1]
-    @@guesses -= 1
-  else
+  guess = params["guess"].to_i
+  evaluate = check_guess(guess)
+  message = evaluate[0]
+  background_color = evaluate[1]
+  @@guesses -= 1
+  
+  # Was the guess wrong and the last one?
+  if @@guesses == 0 && guess != settings.number
     message = "You had five guesses and you lost. Let's try a new number."
     background_color = "darkred"
     reset_game
   end
-
   
   erb :index, :locals => { :number => settings.number, :message => message, :background_color => background_color }
 end
