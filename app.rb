@@ -15,7 +15,9 @@ def check_guess(guess)
     case guess - settings.number
       when 10..100 then ["Too damn high!", "red"]
       when 1...10 then ["A little too high...", "salmon"]
-      when 0 then ["YAY! You guessed it. Let's try a new number.", "green"]
+      when 0
+        ["YAY! You guessed it. Let's try a new number.", "green"]
+        reset_game
       when -10...0 then ["A little too low...", "salmon"]
       when -100..-11 then ["Waaaay too low!", "red"]
     end
