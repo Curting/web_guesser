@@ -2,7 +2,7 @@
 #### Neutral
 ![](https://user-images.githubusercontent.com/20524783/33432698-4c54b232-d5d9-11e7-908d-a2a77722f29e.png)
 #### Slightly too high
-h![](https://user-images.githubusercontent.com/20524783/33432720-672df10e-d5d9-11e7-91f8-41ff5d296b7e.png)
+![](https://user-images.githubusercontent.com/20524783/33432720-672df10e-d5d9-11e7-91f8-41ff5d296b7e.png)
 #### Way too high
 ![](https://user-images.githubusercontent.com/20524783/33432766-8485233a-d5d9-11e7-99d6-2460c7ad8fef.png)
 #### Lost
